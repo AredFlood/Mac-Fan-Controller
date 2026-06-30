@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+
+HELPER="/Library/PrivilegedHelperTools/com.codex.macfanctl"
+
+if [ -f "$HELPER" ]; then
+    chmod 755 "$HELPER" 2>/dev/null || true
+    rm -f "$HELPER"
+fi
+
+exit 0

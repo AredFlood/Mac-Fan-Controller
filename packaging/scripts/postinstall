@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+
+HELPER="/Library/PrivilegedHelperTools/com.codex.macfanctl"
+
+if [ -f "$HELPER" ]; then
+    chown root:wheel "$HELPER"
+    chmod 4755 "$HELPER"
+fi
+
+exit 0
